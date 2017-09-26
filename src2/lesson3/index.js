@@ -1,3 +1,4 @@
+/*
 var headModel = Backbone.Model.extend({
     url: 'http://advertising.test.fang.com/BannerAdplace/GetAdPlacePriceList.do',
     parse: function(response) {
@@ -45,10 +46,10 @@ var appView = Backbone.View.extend({
 })
 
 new appView();
+*/
 
 
-
-/* var headModel = Backbone.Model.extend({
+var headModel = Backbone.Model.extend({
     url: 'https://malls.3g.fang.com/api/shop/GetCityInfo?cityShort=bj',
     parse: function(response) {
         return response.ReturnObject;
@@ -60,11 +61,17 @@ var headM = new headModel();
 var headView = Backbone.View.extend({
     tagName: "thead",
     template: _.template($("#testTml2").html()),
+    events : {
+        "click th":"showModal"
+    },
     render() {
         console.log(this.model.toJSON())
         var ans = this.template(this.model.toJSON());
         this.$el.html(ans);
         return this;
+    },
+    showModal :function(){
+        alert(1)
     }
 })
 
@@ -89,4 +96,4 @@ var appView = Backbone.View.extend({
     }
 })
 
-new appView(); */
+new appView(); 

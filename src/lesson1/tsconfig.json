@@ -4,6 +4,6 @@
         "sourceMap": true
     },
     "files": [
-        "app.ts"
+        "hello.ts"
     ]
 }

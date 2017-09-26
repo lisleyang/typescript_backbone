@@ -1,3 +1,5 @@
+//http://www.typescriptlang.org/play/index.html
+
 /*//多行字符串及字符串模板
 var myName = "soufun"
 console.log(`hello ${myName}`); //hello soufun
@@ -85,16 +87,70 @@ function GetStock(name){
 
 var stock = new GetStock('张三'); */
 
-//类
+/*
+//类 Typescript的核心，使用Typescript开发时，大部分代码都是写在类里面的
 class Person{
-    name
+    constructor(name:string){
+        this.name = name;
+    }
+    private name:string
+    
     eat(){
+        console.log(this.name+"is eating")
+    }
+    private sleep(){
         console.log(this.name+"is eating")
     }
 }
 
-var zhangsan = new Person();
-zhangsan.name = 'zhangsan';
+var zhangsan = new Person('张三');
 zhangsan.eat()
 
 
+class Student extends Person{
+    constructor(name:string,stuId:number){
+        super(name);
+        this.stuId = stuId;
+    }
+    stuId : number
+}
+var stu = new Student('小明',123);
+stu.eat()
+*/
+
+/*
+//接口
+interface Animal{
+    eat();
+}
+
+class Sheep implements Animal{
+    eat(){
+        console.log("i eat grass")
+    }
+}
+
+interface Fun{
+    (source : string,sub:string):boolean;
+}
+
+var mySearch:Fun = function(source:string,sub:string){
+    return source==sub;
+}
+*/
+
+
+/*
+//泛型
+function Hello<T>(arg:T):T{
+    return arg;
+}
+var ouput = Hello<string>('xiaoming');
+*/
+
+/*
+//模块
+import * as funcs from './funcs';
+
+funcs.func1()
+*/
