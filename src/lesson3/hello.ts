@@ -1,2 +1,5 @@
-//声明文件
-/// <reference path="./index.d.ts" />
+//https://microsoft.github.io/TypeSearch/
+//https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types
+$.ajax({
+    
+})
