@@ -19,11 +19,23 @@ declare namespace OOO{
     }
 }
 
-// 实例方法 
-interface Date {
-    format(f: string): string
-}
 
-declare var $ :{
-    fullPage(obj:object):void
+interface JQuery {
+    fadeIn(): JQuery;
+    fadeOut(): JQuery;
+    focus(): JQuery;
+    html(): string;
+    html(val: string): JQuery;
+    show(): JQuery;
+    addClass(className: string): JQuery;
+    removeClass(className: string): JQuery;
+    append(el: HTMLElement): JQuery;
+    val(): string;
+    val(value: string): JQuery;
+    attr(attrName: string): string;
 }
+declare var $: {
+    (el: HTMLElement): JQuery;
+    (selector: string): JQuery;
+    (readyCallback: () => void ): JQuery;
+};
